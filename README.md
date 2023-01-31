@@ -19,7 +19,7 @@ python main.py test-files/sample.txt test-files/sample_two.txt test-files/sample
 ```
 ### Sample Output
 
-![image](https://user-images.githubusercontent.com/84697979/215774937-1bf7ce35-c178-487f-bddb-76ad20ef79c3.png)
+![image](https://user-images.githubusercontent.com/84697979/215775509-088e4a9c-bd69-4100-b1ea-0331150b35b9.png)
 
 
 ### Explanation Of The Modules Used
