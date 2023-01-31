@@ -17,8 +17,12 @@ cat test-files/sample.txt | python main.py
 ```
 python main.py test-files/sample.txt test-files/sample_two.txt test-files/sample_three.txt
 ```
+### Sample Output
 
-#### Explanation Of The Modules Used
+![image](https://user-images.githubusercontent.com/84697979/215774937-1bf7ce35-c178-487f-bddb-76ad20ef79c3.png)
+
+
+### Explanation Of The Modules Used
 The file ```main.py``` depends on three modules - 
 1. **FileManager**, which decodes the command given in the terminal, extracts files from the same, reads contents of all of these files, and returns a list of contents of all of the files given as input.
 2. **OccurrenceAnalyzer**, which parses the words and characters of the contents of each of the files in the aforementioned list, identifies three word sequences, keeps track of the count of each of these sequences in a dictionary, sorts them based on occurrences and displays the same.
