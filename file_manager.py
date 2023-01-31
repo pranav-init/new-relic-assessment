@@ -5,7 +5,7 @@ import logging
 
 class FileManager:
     logging.basicConfig(
-        format='[%(asctime)s] %(levelname)s : {app.FileManager} %(message)s', level=logging.INFO)
+        format='[%(asctime)s] %(levelname)s : {app.%(funcName)s} %(message)s', level=logging.INFO)
 
     @staticmethod
     def parse_data_from_files() -> list:

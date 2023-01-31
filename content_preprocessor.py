@@ -3,7 +3,7 @@ import logging
 
 class ContentPreprocessor:
     logging.basicConfig(
-        format='[%(asctime)s] %(levelname)s : {app.ContentPreprocessor.%(funcName)s} %(message)s', level=logging.INFO)
+        format='[%(asctime)s] %(levelname)s : {app.%(funcName)s} %(message)s', level=logging.INFO)
 
     punctuation_marks = '''!()-[]{};:'"“”’\,<>./?@#$%^&*_~'''
 

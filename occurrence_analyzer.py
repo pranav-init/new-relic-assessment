@@ -5,7 +5,7 @@ import logging
 
 class OccurrenceAnalyzer:
     logging.basicConfig(
-        format='[%(asctime)s] %(levelname)s : {app.OccurrenceAnalyzer.%(funcName)s} %(message)s', level=logging.INFO)
+        format='[%(asctime)s] %(levelname)s : {app.%(funcName)s} %(message)s', level=logging.INFO)
     occurrence_pairs = {}
 
     @staticmethod
