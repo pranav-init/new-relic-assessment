@@ -46,7 +46,15 @@ class FileManager:
 
             for filepath in filepaths:
                 logging.info(f"Parsing data from file at path '{filepath}'.")
-                file = open(filepath, "r", encoding='unicode_escape')
+                try:
+                    file = open(filepath, "r", encoding='unicode_escape')
+                except Exception as e:
+                    if isinstance(e, FileNotFoundError):
+                        logging.error(
+                            f"No file exists with the name/path {filepath}.")
+                        logging.error(
+                            f"WARNING : Skipping this file, as it does not exist.")
+                        continue
                 file_content = file.read()
                 contents_of_files.append(file_content)
                 logging.info(f"Parsing data successful.")
