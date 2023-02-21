@@ -25,11 +25,11 @@ class OccurrenceAnalyzer:
         logging.info("Occurrence pairing successful.")
 
     @staticmethod
-    def render_occurrence_pairs() -> List[Tuple]:
+    def render_occurrence_pairs(resultant_highest_occurrences_number: int) -> List[Tuple]:
         # Sorting the dictionary by value (i.e. number of occurrences)
         # via a list of tuples, sliced only to the first 100 elements.
         occurrence_pairs = sorted(OccurrenceAnalyzer.occurrence_pairs.items(),
-                                  key=lambda tuple: tuple[1], reverse=True)[:100]
+                                  key=lambda tuple: tuple[1], reverse=True)[:resultant_highest_occurrences_number]
 
         logging.info(
             f"First {len(occurrence_pairs)} highest occurrences of three-word sequences :")

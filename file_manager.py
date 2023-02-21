@@ -8,10 +8,11 @@ class FileManager:
         format='[%(asctime)s] %(levelname)s : {app.%(funcName)s} %(message)s', level=logging.INFO)
 
     @staticmethod
-    def parse_data_from_files() -> list:
+    def parse_data_from_files():
         logging.info("Checking for filepaths in the command line arguments.")
         # List sliced, since sys.argv[0] is "main.py"
-        filepaths = sys.argv[1:]
+        resultant_highest_occurrences_number = int(sys.argv[1])
+        filepaths = sys.argv[2:]
         contents_of_files = []
 
         # For reasons of consistency, the condition has been written in
@@ -59,4 +60,4 @@ class FileManager:
                 contents_of_files.append(file_content)
                 logging.info(f"Parsing data successful.")
 
-        return contents_of_files
+        return resultant_highest_occurrences_number, contents_of_files
